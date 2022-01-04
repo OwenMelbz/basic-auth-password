@@ -8,9 +8,14 @@ const STACK = [
 export function middleware(request) {
     let response = NextResponse.next()
 
+    console.log('a')
+
     STACK.forEach(Middleware => {
+        console.log('b')
         response = Middleware(request, response)
+        console.log('b2')
     })
 
+    console.log('c')
     return response
 }
