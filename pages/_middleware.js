@@ -5,7 +5,7 @@ const STACK = [
     BasicAuthMiddleware,
 ]
 
-export function middleware(request) {
+export default function middleware(request) {
     let response = NextResponse.next()
 
     console.log('a')
